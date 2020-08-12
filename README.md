@@ -39,14 +39,16 @@ No projeto foi utilizado para enviar o projeto para Github.
 
 Criei o *schema* sistema-vendas no MySQL Workbench e depois a tabela com o seguinte script sql:
 
-create table cliente (                                           <br>
-    <p>id integer primary key auto_increment not null,</p>       <br>
-    <p>nome varchar(255) not null,                    </p>       <br>
-    <p>email varchar(255) not null,                   </p>       <br>
-    <p>senha varchar(255) not null,                   </p>       <br>
-    <p>telefone varchar(255) not null,                </p>       <br>
-    <p>endereco varchar(255) not null                 </p>       <br>
-)                                                                <br>
+<pre>
+create table cliente (                                    
+    id integer primary key auto_increment not null,      
+    nome varchar(255) not null,                           
+    email varchar(255) not null,                          
+    senha varchar(255) not null,                          
+    telefone varchar(255) not null,                      
+    endereco varchar(255) not null                        
+)                                                         
+</pre>
 
 No projeto o pacote *br.edu.ufrn.clientes.dao* possui todas as classes responsáveis por fazer a interface de conexão entre banco de dados e aplicação web.
 
