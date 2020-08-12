@@ -16,6 +16,7 @@ XAMPP Control Panel v3.2.4 <br>
 
 JSF 2.2 <br>
 MySQL >= 5.1.23 <br>
+PrimeFaces 5.1 <br>
 
 ### Servidor Local
 
@@ -38,14 +39,14 @@ No projeto foi utilizado para enviar o projeto para Github.
 
 Criei o *schema* sistema-vendas no MySQL Workbench e depois a tabela com o seguinte script sql:
 
-create table cliente (                                    <br>
-    id integer primary key auto_increment not null,       <br>
-    nome varchar(255) not null,                           <br>
-    email varchar(255) not null,                          <br>
-    senha varchar(255) not null,                          <br>
-    telefone varchar(255) not null,                       <br>
-    endereco varchar(255) not null                        <br>
-)                                                         <br>
+create table cliente (                                           <br>
+    <p>id integer primary key auto_increment not null,</p>       <br>
+    <p>nome varchar(255) not null,                    </p>       <br>
+    <p>email varchar(255) not null,                   </p>       <br>
+    <p>senha varchar(255) not null,                   </p>       <br>
+    <p>telefone varchar(255) not null,                </p>       <br>
+    <p>endereco varchar(255) not null                 </p>       <br>
+)                                                                <br>
 
 No projeto o pacote *br.edu.ufrn.clientes.dao* possui todas as classes responsáveis por fazer a interface de conexão entre banco de dados e aplicação web.
 
