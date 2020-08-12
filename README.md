@@ -8,10 +8,9 @@ documento apresenta a descrição do desenvolvimento do projeto(site).
 
 ### IDEs e Softwares usados no desenvolvimento do Projeto
 
-NetBeans IDE 8.2
-MySQL Workbench
-XAMPP Control Panel v3.2.4
-
+NetBeans IDE 8.2 <br>
+MySQL Workbench <br>
+XAMPP Control Panel v3.2.4 <br>
 
 ### Tecnologia
 
@@ -39,14 +38,14 @@ No projeto foi utilizado para enviar o projeto para Github.
 
 Criei o *schema* sistema-vendas no MySQL Workbench e depois a tabela com o seguinte script sql:
 
-create table cliente (
-    id integer primary key auto_increment not null,
-    nome varchar(255) not null,
-    email varchar(255) not null,
-    senha varchar(255) not null,
-    telefone varchar(255) not null,
-    endereco varchar(255) not null
-)
+create table cliente (                                    <br>
+    id integer primary key auto_increment not null,       <br>
+    nome varchar(255) not null,                           <br>
+    email varchar(255) not null,                          <br>
+    senha varchar(255) not null,                          <br>
+    telefone varchar(255) not null,                       <br>
+    endereco varchar(255) not null                        <br>
+)                                                         <br>
 
 No projeto o pacote *br.edu.ufrn.clientes.dao* possui todas as classes responsáveis por fazer a interface de conexão entre banco de dados e aplicação web.
 
