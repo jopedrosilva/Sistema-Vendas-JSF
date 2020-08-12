@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+             xmlns:h="http://xmlns.jcp.org/jsf/html"
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:f="http://xmlns.jcp.org/jsf/core"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml">
+
+    <h:form>
+        <p:fieldset legend="Cadastro">
+            <p:toolbar>
+                <p:toolbarGroup>
+                    <p:commandButton value="Adicionar" action="#{clienteBean.adicionar()}" update="@form"></p:commandButton>
+                    <p:commandButton value="Listar" action="#{clienteBean.listar()}" update="@form"></p:commandButton>
+                </p:toolbarGroup>
+            </p:toolbar>
+            <p:messages autoUpdate="true" showDetail="true"></p:messages>
+            <p:panelGrid columns="2">
+                <h:outputText value="Nome"></h:outputText>
+                <p:inputText value="#{clienteBean.cliente.nome}"></p:inputText>
+
+                <h:outputText value="E-mail"></h:outputText>
+                <p:inputText value="#{clienteBean.cliente.email}"></p:inputText>
+                
+                <h:outputText value="Senha"></h:outputText>
+                <p:inputText value="#{clienteBean.cliente.senha}"></p:inputText>
+
+                <h:outputText value="Telefone"></h:outputText>
+                <p:inputMask mask="(99) 99999-9999" value="#{clienteBean.cliente.telefone}"></p:inputMask>
+
+                <h:outputText value="Endereço"></h:outputText>
+                <p:inputText value="#{clienteBean.cliente.endereco}"></p:inputText>
+            </p:panelGrid>
+        </p:fieldset>
+        <hr/>
+         <p:fieldset legend="Clientes">
+             <p:dataTable value="#{clienteBean.cli}" var="cliente">
+                <p:column>
+                    <p:commandButton value="Editar" action="#{clienteBean.editar(cliente)}" update="@form"></p:commandButton>
+                    <p:commandButton value="Deletar" action="#{clienteBean.deletar(cliente)}" update="@form"></p:commandButton>
+                </p:column>
+                <p:column headerText="Nome">
+                    <h:outputText value="#{cliente.nome}"></h:outputText>
+                </p:column>
+                <p:column headerText="E-mail">
+                    <h:outputText value="#{cliente.email}"></h:outputText>
+                </p:column>
+                <p:column headerText="Telefone">
+                    <h:outputText value="#{cliente.telefone}"></h:outputText>
+                </p:column>
+                <p:column headerText="Endereço">
+                    <h:outputText value="#{cliente.endereco}"></h:outputText>
+                </p:column>
+            </p:dataTable>
+         </p:fieldset>
+    </h:form>
+</ui:decorate>
+
